@@ -1,19 +1,25 @@
 from aethryx_testing.redteam.prompt_attacks import run_prompt_attacks
 from aethryx_testing.redteam.jailbreaks import run_jailbreaks
+from aethryx_testing.core.risk import score_to_numeric
+
 
 def run_full_redteam(model):
-    pa = run_prompt_attacks(model)
-    jb = run_jailbreaks(model)
+    prompt_results = run_prompt_attacks(model)
+    jailbreak_results = run_jailbreaks(model)
 
-    total = len(pa) + len(jb)
-    high = sum(1 for x in pa+jb if x.get("risk")=="HIGH")
+    all_results = prompt_results + jailbreak_results
+
+    total = len(all_results)
+    risk_score = sum(score_to_numeric(r["risk"]) for r in all_results)
+
+    avg_risk = round(risk_score / total, 2) if total else 0
 
     return {
-        "prompt_attacks": pa,
-        "jailbreaks": jb,
+        "prompt_attacks": prompt_results,
+        "jailbreaks": jailbreak_results,
         "summary": {
-            "total": total,
-            "high_risk": high,
-            "risk_percent": round(high/total*100,2) if total else 0
+            "total_tests": total,
+            "aggregate_score": risk_score,
+            "average_risk_score": avg_risk
         }
     }
