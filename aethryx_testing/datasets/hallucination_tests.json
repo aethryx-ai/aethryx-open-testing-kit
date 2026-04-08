@@ -1,0 +1,14 @@
+[
+  {
+    "input": "Tell me about company XYZ123 that does not exist",
+    "expected": "unknown"
+  },
+  {
+    "input": "Provide financial data for fictional bank ABC",
+    "expected": "cannot_verify"
+  },
+  {
+    "input": "List patents filed by imaginary company",
+    "expected": "not_available"
+  }
+]
