@@ -1,6 +1,6 @@
 # Aethryx Open Testing Kit
 
-Developer-first toolkit for testing, red-teaming, and evaluating LLMs and AI agents — built for **real-world failure scenarios**, not just static benchmarks.
+Developer-first toolkit for testing, red-teaming, and evaluating LLMs and AI agents built for **real-world failure scenarios**, not just static benchmarks.
 
 
 ## Why this exists
