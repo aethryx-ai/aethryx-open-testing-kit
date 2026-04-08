@@ -2,7 +2,6 @@
 
 Developer-first toolkit for testing, red-teaming, and evaluating LLMs and AI agents — built for **real-world failure scenarios**, not just static benchmarks.
 
----
 
 ## Why this exists
 
@@ -18,8 +17,6 @@ But real-world AI systems fail because of:
 - Data leakage & unsafe autonomy  
 
 **Aethryx focuses on testing AI systems the way they actually break in production.**
-
----
 
 ## Key Capabilities
 
@@ -44,13 +41,6 @@ But real-world AI systems fail because of:
 - Vulnerability detection
 - Risk classification (LOW / HIGH / CRITICAL)
 - Aggregated risk summaries
-
-### SDK Hooks (Bridge to Aethryx Platform)
-- Decision trace logging
-- Governance integration points
-- Runtime observability hooks
-
----
 
 ## Quick Start
 
