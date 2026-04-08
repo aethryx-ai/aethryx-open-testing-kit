@@ -1,6 +1,6 @@
 # Aethryx Open Testing Kit
 
-🚀 Developer-first toolkit for testing, red-teaming, and evaluating LLMs and AI agents — built for **real-world failure scenarios**, not just static benchmarks.
+Developer-first toolkit for testing, red-teaming, and evaluating LLMs and AI agents — built for **real-world failure scenarios**, not just static benchmarks.
 
 ---
 
@@ -21,7 +21,7 @@ But real-world AI systems fail because of:
 
 ---
 
-## ⚡ Key Capabilities
+## Key Capabilities
 
 ### Red Teaming
 - Prompt injection attacks
