@@ -1,11 +1,12 @@
-from aethryx_testing.redteam.prompt_attacks import run_prompt_attacks
-from aethryx_testing.redteam.jailbreaks import run_jailbreaks
+from aethryx_testing.redteam.engine import run_full_redteam
+from aethryx_testing.scenarios.agent_failures import (
+    run_agent_failure_scenarios,
+    run_advanced_scenarios
+)
 
-
-def run_all_tests(model):
-    results = {}
-
-    results["prompt_attacks"] = run_prompt_attacks(model)
-    results["jailbreaks"] = run_jailbreaks(model)
-
-    return results
+def run_all_tests(agent):
+    return {
+        "redteam": run_full_redteam(agent),
+        "agent_failures": run_agent_failure_scenarios(agent),
+        "advanced": run_advanced_scenarios(agent)
+    }
